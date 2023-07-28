@@ -2,55 +2,61 @@
 using NUnit.Framework;
 using ResxDiffLib;
 
-namespace ResxDiffTest {
+namespace ResxDiffTest;
 
-    [TestFixture]
-    public class LoadTest {
+[TestFixture]
+public class LoadTest
+{
 
-        [Test]
-        public void Load() {
-            var test1 = new ResxDocument(TestUtils.LoadTest1());
+    [Test]
+    public void Load()
+    {
+        var test1 = new ResxDocument(TestUtils.LoadTest1());
 
-            Assert.AreEqual(3, test1.Data.Count);
-            Assert.AreEqual("Test_key_1", test1.Data[0].Name);
-            Assert.AreEqual(null, test1.Data[0].Type);
-            Assert.AreEqual(null, test1.Data[0].Mimetype);
-            Assert.AreEqual("preserve", test1.Data[0].Space);
+        Assert.That(test1.Data.Count, Is.EqualTo(3));
+        Assert.That(test1.Data[0].Name, Is.EqualTo("Test_key_1"));
+        Assert.That(test1.Data[0].Type, Is.EqualTo(null));
+        Assert.That(test1.Data[0].Mimetype, Is.EqualTo(null));
+        Assert.That(test1.Data[0].Space, Is.EqualTo("preserve"));
 
-            Assert.AreEqual("Test value 1", test1.Data[0].Value);
-            Assert.AreEqual("A comment", test1.Data[0].Comment);
-        }
+        Assert.That(test1.Data[0].Value, Is.EqualTo("Test value 1"));
+        Assert.That(test1.Data[0].Comment, Is.EqualTo("A comment"));
+    }
 
-        [Test]
-        public void ResxDataToXml() {
-            var data = new ResxData {
-                                        Name = "A_key",
-                                        Value = "A key",
-                                        Space = "preserve"
-                                    };
-            var elem = data.ToXml();
-            
-            Assert.AreEqual("data", elem.Name.ToString());
-            Assert.AreEqual("A_key", elem.Attribute("name").Value);
-            Assert.AreEqual("preserve", elem.Attribute(XNamespace.Xml + "space").Value);
-            Assert.AreEqual("A key", elem.Element("value").Value);
-        }
+    [Test]
+    public void ResxDataToXml()
+    {
+        var data = new ResxData
+        {
+            Name = "A_key",
+            Value = "A key",
+            Space = "preserve"
+        };
+        var elem = data.ToXml();
 
-        [Test]
-        public void ResxDocumentToXml() {
-            var test1 = new ResxDocument(TestUtils.LoadTest1());
-            Assert.AreEqual(TestUtils.LoadTest1().ToString(), test1.ToXml().ToString());
-        }
+        Assert.That(elem.Name.ToString(), Is.EqualTo("data"));
+        Assert.That(elem.Attribute("name").Value, Is.EqualTo("A_key"));
+        Assert.That(elem.Attribute(XNamespace.Xml + "space").Value, Is.EqualTo("preserve"));
+        Assert.That(elem.Element("value").Value, Is.EqualTo("A key"));
+    }
 
-        [Test]
-        public void ResxDocumentToXmlWithChanges() {
-            var test1 = new ResxDocument(TestUtils.LoadTest1());
-            test1.Data.Add(new ResxData {
-                                            Name = "Test_key_4",
-                                            Value = "Test value 4",
-                                            Space = "preserve"
-                                        });
-            Assert.AreEqual(TestUtils.LoadTest2().ToString(), test1.ToXml().ToString());
-        }
+    [Test]
+    public void ResxDocumentToXml()
+    {
+        var test1 = new ResxDocument(TestUtils.LoadTest1());
+        Assert.That(test1.ToXml().ToString(), Is.EqualTo(TestUtils.LoadTest1().ToString()));
+    }
+
+    [Test]
+    public void ResxDocumentToXmlWithChanges()
+    {
+        var test1 = new ResxDocument(TestUtils.LoadTest1());
+        test1.Data.Add(new ResxData
+        {
+            Name = "Test_key_4",
+            Value = "Test value 4",
+            Space = "preserve"
+        });
+        Assert.That(test1.ToXml().ToString(), Is.EqualTo(TestUtils.LoadTest2().ToString()));
     }
 }
