@@ -3,13 +3,13 @@ using System.Xml.Linq;
 namespace ResxDiffLib;
 public class ResxData
 {
-    public string Name { get; set; }
-    public string Type { get; set; }
-    public string Mimetype { get; set; }
-    public string Space { get; set; }
+    public string? Name { get; set; }
+    public string? Type { get; set; }
+    public string? Mimetype { get; set; }
+    public string? Space { get; set; }
 
-    public string Value { get; set; }
-    public string Comment { get; set; }
+    public string? Value { get; set; }
+    public string? Comment { get; set; }
 
     public ResxData() { }
 

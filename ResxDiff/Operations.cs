@@ -17,7 +17,7 @@ public static class Operations
     /// <param name="keys">The names of the keys to copy</param>
     /// <param name="from">The document to copy from</param>
     /// <param name="to">The document to copy to</param>
-    public static void CopyKeys(IEnumerable<string> keys, ResxDocument from, ResxDocument to)
+    public static void CopyKeys(IEnumerable<string?> keys, ResxDocument from, ResxDocument to)
     {
         from.Data.Where(data => keys.Contains(data.Name)).ToList().ForEach(to.Data.Add);
     }
@@ -28,7 +28,7 @@ public static class Operations
     /// <param name="keys">The names of the keys whose values should be copied</param>
     /// <param name="from">The document to copy from</param>
     /// <param name="to">The document to copy to</param>
-    public static void CopyValues(IEnumerable<string> keys, ResxDocument from, ResxDocument to)
+    public static void CopyValues(IEnumerable<string?> keys, ResxDocument from, ResxDocument to)
     {
         to.Data.Where(data => keys.Contains(data.Name)).ToList()
             .ForEach(aData => aData.Value = from.Data.First(bData => bData.Name == aData.Name).Value);

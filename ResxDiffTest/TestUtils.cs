@@ -6,7 +6,7 @@ public static class TestUtils
 
     private static string BasePath()
     {
-        return Path.GetDirectoryName(typeof(TestUtils).Assembly.Location);
+        return Path.GetDirectoryName(typeof(TestUtils).Assembly.Location) ?? throw new InvalidOperationException("No base path available");
     }
 
     private static XDocument LoadResx(string filename)

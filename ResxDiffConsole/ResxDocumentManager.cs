@@ -85,7 +85,12 @@ sealed class ResxDocumentManager
 
         public void Save()
         {
-            ToXml().Save(Path);
+            var xml = ToXml();
+            if (xml == null)
+            {
+                return;
+            }
+            xml.Save(Path);
         }
     }
 }

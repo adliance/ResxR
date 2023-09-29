@@ -8,7 +8,7 @@ public static class Helpers
     /// <param name="a">The base document</param>
     /// <param name="b">The document to check for missing keys</param>
     /// <returns>The keys present in 'a' that are missing in 'b'</returns>
-    public static IEnumerable<string> MissingKeys(ResxDocument a, ResxDocument b)
+    public static IEnumerable<string?> MissingKeys(ResxDocument a, ResxDocument b)
     {
         var aKeys = a.Data.Select(data => data.Name);
         var bKeys = b.Data.Select(data => data.Name);
@@ -21,7 +21,7 @@ public static class Helpers
     /// <param name="a">The first document</param>
     /// <param name="b">The second document</param>
     /// <returns>The keys that are present in both 'a' and 'b'</returns>
-    public static IEnumerable<string> PresentKeys(ResxDocument a, ResxDocument b)
+    public static IEnumerable<string?> PresentKeys(ResxDocument a, ResxDocument b)
     {
         var aKeys = a.Data.Select(data => data.Name);
         var bKeys = b.Data.Select(data => data.Name);
@@ -34,7 +34,7 @@ public static class Helpers
     /// <param name="a">The first document</param>
     /// <param name="b">The second document</param>
     /// <returns>The keys present in 'a' and 'b' which have differing values</returns>
-    public static IEnumerable<string> DifferentValues(ResxDocument a, ResxDocument b)
+    public static IEnumerable<string?> DifferentValues(ResxDocument a, ResxDocument b)
     {
         return PresentKeys(a, b).Where(name =>
                                        a.Data.First(aData => aData.Name == name).Value !=
@@ -47,7 +47,7 @@ public static class Helpers
     /// <param name="a">The first document</param>
     /// <param name="b">The second document</param>
     /// <returns>The keys present in 'a' and 'b' which have the same values</returns>
-    public static IEnumerable<string> IdenticalValues(ResxDocument a, ResxDocument b)
+    public static IEnumerable<string?> IdenticalValues(ResxDocument a, ResxDocument b)
     {
         return PresentKeys(a, b).Where(name =>
                                        a.Data.First(aData => aData.Name == name).Value ==
@@ -60,7 +60,7 @@ public static class Helpers
     /// <param name="a">The first document</param>
     /// <param name="b">The second document</param>
     /// <returns>The keys present in 'a' and 'b' which have differing metadata</returns>
-    public static IEnumerable<string> MismatchedMetadata(ResxDocument a, ResxDocument b)
+    public static IEnumerable<string?> MismatchedMetadata(ResxDocument a, ResxDocument b)
     {
         return PresentKeys(a, b).Where(name =>
         {
@@ -78,7 +78,7 @@ public static class Helpers
     /// </summary>
     /// <param name="d">The document to check for duplicate keys</param>
     /// <returns>The keys that appear more than once in 'd'</returns>
-    public static IEnumerable<string> DuplicateKeys(ResxDocument d)
+    public static IEnumerable<string?> DuplicateKeys(ResxDocument d)
     {
         return d.Data.GroupBy(data => data.Name).Where(group => group.Count() > 1).Select(group => group.Key);
     }
@@ -89,7 +89,7 @@ public static class Helpers
     /// </summary>
     /// <param name="d">The document to check for duplicate keys</param>
     /// <returns>The keys that appear more than once in 'd'</returns>
-    public static IEnumerable<string> MissingSpacePreserve(ResxDocument d)
+    public static IEnumerable<string?> MissingSpacePreserve(ResxDocument d)
     {
         return d.Data.Where(data => data.Space != "preserve").Select(data => data.Name);
     }

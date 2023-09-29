@@ -35,16 +35,16 @@ public class LoadTest
         var elem = data.ToXml();
 
         Assert.That(elem.Name.ToString(), Is.EqualTo("data"));
-        Assert.That(elem.Attribute("name").Value, Is.EqualTo("A_key"));
-        Assert.That(elem.Attribute(XNamespace.Xml + "space").Value, Is.EqualTo("preserve"));
-        Assert.That(elem.Element("value").Value, Is.EqualTo("A key"));
+        Assert.That(elem.Attribute("name")?.Value, Is.EqualTo("A_key"));
+        Assert.That(elem.Attribute(XNamespace.Xml + "space")?.Value, Is.EqualTo("preserve"));
+        Assert.That(elem.Element("value")?.Value, Is.EqualTo("A key"));
     }
 
     [Test]
     public void ResxDocumentToXml()
     {
         var test1 = new ResxDocument(TestUtils.LoadTest1());
-        Assert.That(test1.ToXml().ToString(), Is.EqualTo(TestUtils.LoadTest1().ToString()));
+        Assert.That(test1.ToXml()?.ToString(), Is.EqualTo(TestUtils.LoadTest1().ToString()));
     }
 
     [Test]
@@ -57,6 +57,6 @@ public class LoadTest
             Value = "Test value 4",
             Space = "preserve"
         });
-        Assert.That(test1.ToXml().ToString(), Is.EqualTo(TestUtils.LoadTest2().ToString()));
+        Assert.That(test1.ToXml()?.ToString(), Is.EqualTo(TestUtils.LoadTest2().ToString()));
     }
 }

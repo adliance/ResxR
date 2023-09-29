@@ -19,16 +19,17 @@ public class ResxDocument
         _xml = new XDocument(xml);
     }
 
-    public XDocument ToXml()
+    public XDocument? ToXml()
     {
-        if (_xml == null)
+        var xml = new XDocument(_xml);
+        var xmlRoot = xml.Root;
+        if (xmlRoot == null)
         {
             return null;
         }
 
-        var xml = new XDocument(_xml);
-        xml.Root.Elements("data").Remove();
-        xml.Root.Add(Data.Select(data => data.ToXml()).ToArray());
+        xmlRoot.Elements("data").Remove();
+        xmlRoot.Add(Data.Select(data => data.ToXml()).ToArray());
 
         return xml;
     }
