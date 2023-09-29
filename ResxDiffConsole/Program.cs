@@ -1,9 +1,10 @@
-﻿using CommandLine;
+using CommandLine;
 using CommandLine.Text;
 using ResxDiffLib;
 
 namespace ResxDiffConsole;
-class Program
+
+sealed class Program
 {
     static void Main(string[] args)
     {

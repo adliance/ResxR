@@ -1,10 +1,10 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using ResxDiffLib;
 
 namespace ResxDiffTest;
 
 [TestFixture]
-class OperationsTest
+sealed class OperationsTest
 {
 
     private ResxDocument _test1;

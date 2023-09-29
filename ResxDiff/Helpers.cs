@@ -1,4 +1,4 @@
-﻿namespace ResxDiffLib;
+namespace ResxDiffLib;
 public static class Helpers
 {
 

@@ -1,8 +1,9 @@
-﻿using System.Text;
+using System.Text;
 using ResxDiffLib;
 
 namespace ResxDiffConsole;
-class ResxDataPrinter
+
+sealed class ResxDataPrinter
 {
 
     private bool FullData { get; set; }

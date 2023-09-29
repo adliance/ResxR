@@ -1,8 +1,9 @@
-﻿using System.Xml.Linq;
+using System.Xml.Linq;
 using ResxDiffLib;
 
 namespace ResxDiffConsole;
-class ResxDocumentManager
+
+sealed class ResxDocumentManager
 {
     private readonly Options _options;
     private readonly IDictionary<string, SavableResxDocument> _loadedDocuments = new Dictionary<string, SavableResxDocument>();
@@ -39,7 +40,7 @@ class ResxDocumentManager
     {
         if (!_options.Files.Any())
         {
-            Console.Error.Write(_options.GetUsage());
+            Console.Error.Write(Options.GetUsage());
             Environment.Exit(1);
         }
         return _options.Files.Select(GetDocument).ToList();
@@ -72,7 +73,7 @@ class ResxDocumentManager
         return _loadedDocuments[path];
     }
 
-    public class SavableResxDocument : ResxDocument
+    public sealed class SavableResxDocument : ResxDocument
     {
         public string Path { get; set; }
 

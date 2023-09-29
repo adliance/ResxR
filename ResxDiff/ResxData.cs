@@ -1,4 +1,3 @@
-﻿using System;
 using System.Xml.Linq;
 
 namespace ResxDiffLib;
@@ -34,13 +33,35 @@ public class ResxData
     {
         var data = new XElement("data");
 
-        if (Name != null) data.SetAttributeValue("name", Name);
-        if (Type != null) data.SetAttributeValue("type", Type);
-        if (Mimetype != null) data.SetAttributeValue("mimetype", Mimetype);
-        if (Space != null) data.SetAttributeValue(XNamespace.Xml + "space", Space);
+        if (Name != null)
+        {
+            data.SetAttributeValue("name", Name);
+        }
 
-        if (Value != null) data.Add(new XElement("value", Value));
-        if (Comment != null) data.Add(new XElement("comment", Comment));
+        if (Type != null)
+        {
+            data.SetAttributeValue("type", Type);
+        }
+
+        if (Mimetype != null)
+        {
+            data.SetAttributeValue("mimetype", Mimetype);
+        }
+
+        if (Space != null)
+        {
+            data.SetAttributeValue(XNamespace.Xml + "space", Space);
+        }
+
+        if (Value != null)
+        {
+            data.Add(new XElement("value", Value));
+        }
+
+        if (Comment != null)
+        {
+            data.Add(new XElement("comment", Comment));
+        }
 
         return data;
     }

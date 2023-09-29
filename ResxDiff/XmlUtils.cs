@@ -1,15 +1,15 @@
-﻿using System.Xml.Linq;
+using System.Xml.Linq;
 
 namespace ResxDiffLib;
 public static class XmlUtils
 {
-    public static string ValueOrNull(XAttribute x)
+    public static string? ValueOrNull(XAttribute? x)
     {
-        return x != null ? x.Value : null;
+        return x?.Value;
     }
 
-    public static string ValueOrNull(XElement x)
+    public static string? ValueOrNull(XElement? x)
     {
-        return x != null ? x.Value : null;
+        return x?.Value;
     }
 }

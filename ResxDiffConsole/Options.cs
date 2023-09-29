@@ -1,13 +1,12 @@
-﻿using CommandLine;
+using CommandLine;
 using CommandLine.Text;
 
 namespace ResxDiffConsole;
 
-class Options
+sealed class Options
 {
-
     [Value(2, MetaName = "files", Required = false)]
-    public List<string> Files { get; set; }
+    public required List<string> Files { get; set; }
 
     // Two files
 
@@ -55,7 +54,7 @@ class Options
     [Option('f', "full-data", HelpText = "Shows all fields from the data elements")]
     public bool FullData { get; set; }
 
-    public string GetUsage()
+    public static string GetUsage()
     {
         var help = new HelpText
         {

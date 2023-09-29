@@ -1,6 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Xml.Linq;
 
 namespace ResxDiffLib;
@@ -24,7 +21,10 @@ public class ResxDocument
 
     public XDocument ToXml()
     {
-        if (_xml == null) return null;
+        if (_xml == null)
+        {
+            return null;
+        }
 
         var xml = new XDocument(_xml);
         xml.Root.Elements("data").Remove();
