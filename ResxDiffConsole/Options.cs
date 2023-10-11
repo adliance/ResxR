@@ -6,7 +6,7 @@ namespace ResxDiffConsole;
 sealed class Options
 {
     [Value(2, MetaName = "files", Required = false)]
-    public required List<string> Files { get; set; }
+    public required IEnumerable<string> Files { get; set; }
 
     // Two files
 

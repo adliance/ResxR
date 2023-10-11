@@ -16,7 +16,7 @@ sealed class ResxDocumentManager
 
     public SavableResxDocument RequireOneFile()
     {
-        if (_options.Files.Count != 1)
+        if (_options.Files.Count() != 1)
         {
             Console.Error.Write("An option you have specified requires exactly one file");
             Environment.Exit(1);
@@ -26,14 +26,15 @@ sealed class ResxDocumentManager
 
     public Tuple<SavableResxDocument, SavableResxDocument> RequireTwoFiles()
     {
-        if (_options.Files.Count != 2)
+        var files = _options.Files.ToList();
+        if (files.Count != 2)
         {
             Console.Error.Write("An option you have specified requires exactly two files");
             Environment.Exit(1);
         }
         return new Tuple<SavableResxDocument, SavableResxDocument>(
-            GetDocument(_options.Files[0]),
-            GetDocument(_options.Files[1]));
+            GetDocument(files[0]),
+            GetDocument(files[1]));
     }
 
     public IEnumerable<SavableResxDocument> RequireFiles()
