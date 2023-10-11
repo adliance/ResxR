@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ResxDiff\ResxDiffLib.csproj" />
+    <ProjectReference Include="..\..\src\ResxDiff\ResxDiffLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
