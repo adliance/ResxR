@@ -13,6 +13,7 @@
     <ToolCommandName>ResxDiff</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <PackageId>ResxDiff</PackageId>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ResxDiff\ResxDiffLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\readme.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
