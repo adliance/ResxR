@@ -67,11 +67,12 @@ sealed class ResxDocumentManager
 
     private SavableResxDocument GetDocument(string path)
     {
-        if (!_loadedDocuments.ContainsKey(path))
+        if (!_loadedDocuments.TryGetValue(path, out var value))
         {
-            _loadedDocuments[path] = new SavableResxDocument(path);
+            value = new SavableResxDocument(path);
+            _loadedDocuments[path] = value;
         }
-        return _loadedDocuments[path];
+        return value;
     }
 
     public sealed class SavableResxDocument : ResxDocument
