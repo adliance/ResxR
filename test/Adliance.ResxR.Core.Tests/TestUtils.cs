@@ -1,6 +1,6 @@
 using System.Xml.Linq;
 
-namespace ResxDiffTest;
+namespace Adliance.ResxR.Core.Tests;
 public static class TestUtils
 {
 

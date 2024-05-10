@@ -1,6 +1,6 @@
 using System.Xml.Linq;
 
-namespace ResxDiffLib;
+namespace Adliance.ResxR.Core;
 public static class XmlUtils
 {
     public static string? ValueOrNull(XAttribute? x)

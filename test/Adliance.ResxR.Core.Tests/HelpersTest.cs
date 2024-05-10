@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using ResxDiffLib;
+using Adliance.ResxR.Core;
 
-namespace ResxDiffTest;
+namespace Adliance.ResxR.Core.Tests;
 
 [TestFixture]
 sealed class HelpersTest

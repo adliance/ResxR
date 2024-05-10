@@ -1,6 +1,6 @@
 using System.Xml.Linq;
 
-namespace ResxDiffLib;
+namespace Adliance.ResxR.Core;
 public class ResxDocument
 {
     public IList<ResxData> Data { get; set; }

@@ -1,7 +1,7 @@
 using CommandLine;
 using CommandLine.Text;
 
-namespace ResxDiffConsole;
+namespace Adliance.ResxR;
 
 sealed class Options
 {
@@ -58,14 +58,14 @@ sealed class Options
     {
         var help = new HelpText
         {
-            Heading = new HeadingInfo("ResxDiff", "1.0"),
-            Copyright = new CopyrightInfo("Tom Wadley, Adrian Fürschuß", 2012, 2024),
+            Heading = new HeadingInfo("ResxR", "1.0"),
+            Copyright = new CopyrightInfo("Tom Wadley, Adliance", 2012, 2024),
             AdditionalNewLineAfterOption = true,
             AddDashesToOption = true
         };
-        help.AddPreOptionsLine("Usage: ResxDiff [OPTION]... [FILE]");
-        help.AddPreOptionsLine("Usage: ResxDiff [OPTION]... [FILE1] [FILE2]");
-        help.AddPreOptionsLine("Usage: ResxDiff [OPTION]... [FILE]...");
+        help.AddPreOptionsLine("Usage: ResxR [OPTION]... [FILE]");
+        help.AddPreOptionsLine("Usage: ResxR [OPTION]... [FILE1] [FILE2]");
+        help.AddPreOptionsLine("Usage: ResxR [OPTION]... [FILE]...");
         help.AddPreOptionsLine("Displays information about .resx files, shows differences between .resx files and performs operations on .resx files");
         return help;
     }

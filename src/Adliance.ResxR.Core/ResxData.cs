@@ -1,6 +1,6 @@
 using System.Xml.Linq;
 
-namespace ResxDiffLib;
+namespace Adliance.ResxR.Core;
 public class ResxData
 {
     public string? Name { get; set; }
