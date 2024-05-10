@@ -17,7 +17,7 @@ The install file packs the project as tool and installs ist locally as global to
 
 ```
 ResxR 1.0
-Copyright (C) 2012 - 2024 Tom Wadley, Adrian F�rschu�
+Copyright (C) 2024 Adliance
 Usage: ResxR [OPTION]... [FILE]
 Usage: ResxR [OPTION]... [FILE1] [FILE2]
 Usage: ResxR [OPTION]... [FILE]...
