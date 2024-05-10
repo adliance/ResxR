@@ -1,1 +1,1 @@
-dotnet format ResxDiff.sln -v normal
+dotnet format Adliance.ResxR.sln -v normal

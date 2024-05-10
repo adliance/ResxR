@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResxDiffLib", "src\ResxDiff\ResxDiffLib.csproj", "{1966207D-B364-4C60-A903-6F7826B3A899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adliance.ResxR.Core", "src\Adliance.ResxR.Core\Adliance.ResxR.Core.csproj", "{1966207D-B364-4C60-A903-6F7826B3A899}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResxDiffTest", "test\ResxDiffTest\ResxDiffTest.csproj", "{6D22F35D-40BE-4B35-81BB-69B7DCD03D88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adliance.ResxR.Core.Tests", "test\Adliance.ResxR.Core.Tests\Adliance.ResxR.Core.Tests.csproj", "{6D22F35D-40BE-4B35-81BB-69B7DCD03D88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResxDiffConsole", "src\ResxDiffConsole\ResxDiffConsole.csproj", "{0BC4F749-742E-40ED-81F2-67E91BB91141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adliance.ResxR", "src\Adliance.ResxR\Adliance.ResxR.csproj", "{0BC4F749-742E-40ED-81F2-67E91BB91141}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

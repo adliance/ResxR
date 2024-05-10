@@ -1,4 +1,4 @@
-# ResxDiff contributors
+# ResxR contributors
 
 * **[Tom Wadley](https://github.com/tomwadley)** - [tomwadley.net](http://tomwadley.net)
 

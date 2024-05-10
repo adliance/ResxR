@@ -1,4 +1,4 @@
-# ResxDiff
+# ResxR
 
 Originally forked from https://github.com/tomwadley/resx-diff as of version published on 20 Jan 2013, then modified and upgraded tech-stack.
 
@@ -6,21 +6,21 @@ Helps you deal with your growing number of .NET Resource files by quickly showin
 
 ## Installing
 
-`dotnet tool install -g ResxDiff --no-cache --ignore-failed-sources -v q`
+`dotnet tool install -g ResxR --no-cache --ignore-failed-sources -v q`
 
 Or build it yourself (scroll down for build instructions) and install it via the `install.cmd` file on root level of this repository.
 The install file packs the project as tool and installs ist locally as global tool.
 
 ## Usage
 
-`$ ResxDiff --help`
+`$ ResxR --help`
 
 ```
-ResxDiff 1.0
-Copyright (C) 2012 - 2024 Tom Wadley, Adrian Fürschuß
-Usage: ResxDiff [OPTION]... [FILE]
-Usage: ResxDiff [OPTION]... [FILE1] [FILE2]
-Usage: ResxDiff [OPTION]... [FILE]...
+ResxR 1.0
+Copyright (C) 2012 - 2024 Tom Wadley, Adrian Fï¿½rschuï¿½
+Usage: ResxR [OPTION]... [FILE]
+Usage: ResxR [OPTION]... [FILE1] [FILE2]
+Usage: ResxR [OPTION]... [FILE]...
 Displays information about .resx files, shows differences between .resx files
 and performs operations on .resx files
 

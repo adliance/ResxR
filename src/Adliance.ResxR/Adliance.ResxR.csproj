@@ -7,16 +7,16 @@
     <!-- .NET tool -->
     <PackAsTool>true</PackAsTool>
     <IsPackable>true</IsPackable>
-    <ToolCommandName>ResxDiff</ToolCommandName>
+    <ToolCommandName>ResxR</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <PackageId>ResxDiff</PackageId>
+    <PackageId>ResxR</PackageId>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ResxDiff\ResxDiffLib.csproj" />
+    <ProjectReference Include="..\Adliance.ResxR.Core\Adliance.ResxR.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\readme.md" Pack="true" PackagePath="\" />
