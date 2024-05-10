@@ -54,12 +54,12 @@ sealed class Options
     [Option('f', "full-data", HelpText = "Shows all fields from the data elements")]
     public bool FullData { get; set; }
 
-    public static string GetUsage()
+    public static HelpText GetUsageHelpText()
     {
         var help = new HelpText
         {
             Heading = new HeadingInfo("ResxDiff", "1.0"),
-            Copyright = new CopyrightInfo("Tom Wadley", 2012, 2023),
+            Copyright = new CopyrightInfo("Tom Wadley, Adrian Fürschuß", 2012, 2024),
             AdditionalNewLineAfterOption = true,
             AddDashesToOption = true
         };

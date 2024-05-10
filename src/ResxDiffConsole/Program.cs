@@ -8,7 +8,8 @@ sealed class Program
 {
     static void Main(string[] args)
     {
-        var parserResult = Parser.Default.ParseArguments<Options>(args);
+        var parser = new Parser(with => with.HelpWriter = null);
+        var parserResult = parser.ParseArguments<Options>(args);
         parserResult.WithParsed(options =>
         {
             try
@@ -23,12 +24,19 @@ sealed class Program
         });
         parserResult.WithNotParsed(errs =>
         {
-            var helpText = HelpText.AutoBuild(parserResult, h =>
-            {
-                return HelpText.DefaultParsingErrorsHandler(parserResult, h);
-            }, e => e);
+            DisplayHelp(parserResult);
             Environment.Exit(1);
         });
+    }
+
+    static void DisplayHelp<T>(ParserResult<T> result)
+    {
+        var helpText = HelpText.AutoBuild(result, h =>
+        {
+            h = Options.GetUsageHelpText();
+            return HelpText.DefaultParsingErrorsHandler(result, h);
+        }, e => e);
+        Console.WriteLine(helpText);
     }
 
     private static void OnSuccessfulParse(Options options)

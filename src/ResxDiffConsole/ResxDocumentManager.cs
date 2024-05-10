@@ -41,7 +41,7 @@ sealed class ResxDocumentManager
     {
         if (!_options.Files.Any())
         {
-            Console.Error.Write(Options.GetUsage());
+            Console.Error.Write(Options.GetUsageHelpText());
             Environment.Exit(1);
         }
         return _options.Files.Select(GetDocument).ToList();
