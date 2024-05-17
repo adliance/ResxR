@@ -1,6 +1,5 @@
 using System.Xml.Linq;
 using NUnit.Framework;
-using Adliance.ResxR.Core;
 
 namespace Adliance.ResxR.Core.Tests;
 

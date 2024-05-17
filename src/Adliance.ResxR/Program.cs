@@ -1,6 +1,6 @@
+using Adliance.ResxR.Core;
 using CommandLine;
 using CommandLine.Text;
-using Adliance.ResxR.Core;
 
 namespace Adliance.ResxR;
 
