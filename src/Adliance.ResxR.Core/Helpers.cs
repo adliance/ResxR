@@ -1,4 +1,4 @@
-namespace ResxDiffLib;
+namespace Adliance.ResxR.Core;
 public static class Helpers
 {
 

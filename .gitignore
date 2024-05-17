@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Ignore editor config since it comes from the code style package
+.editorconfig
+
 # User-specific files
 *.rsuser
 *.suo

@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResxDiffLib", "src\ResxDiff\ResxDiffLib.csproj", "{1966207D-B364-4C60-A903-6F7826B3A899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adliance.ResxR.Core", "src\Adliance.ResxR.Core\Adliance.ResxR.Core.csproj", "{1966207D-B364-4C60-A903-6F7826B3A899}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResxDiffTest", "test\ResxDiffTest\ResxDiffTest.csproj", "{6D22F35D-40BE-4B35-81BB-69B7DCD03D88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adliance.ResxR.Core.Tests", "test\Adliance.ResxR.Core.Tests\Adliance.ResxR.Core.Tests.csproj", "{6D22F35D-40BE-4B35-81BB-69B7DCD03D88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResxDiffConsole", "src\ResxDiffConsole\ResxDiffConsole.csproj", "{0BC4F749-742E-40ED-81F2-67E91BB91141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adliance.ResxR", "src\Adliance.ResxR\Adliance.ResxR.csproj", "{0BC4F749-742E-40ED-81F2-67E91BB91141}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0EB81869-74F2-4730-B2F3-AEE1B9707E87}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D78E9CA4-0BCA-400C-B168-F0ED4A3EA02A}"
 	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
 		build.cmd = build.cmd
 		CONTRIBUTORS.md = CONTRIBUTORS.md
 		install.cmd = install.cmd
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Global
@@ -39,6 +41,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1E3530A8-008D-4154-9CE8-F51BC14685D8}
+		SolutionGuid = {3B88DAB2-2832-46EA-82E3-71E1BCCD5B89}
 	EndGlobalSection
 EndGlobal

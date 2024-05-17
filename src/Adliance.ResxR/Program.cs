@@ -1,8 +1,8 @@
+using Adliance.ResxR.Core;
 using CommandLine;
 using CommandLine.Text;
-using ResxDiffLib;
 
-namespace ResxDiffConsole;
+namespace Adliance.ResxR;
 
 sealed class Program
 {

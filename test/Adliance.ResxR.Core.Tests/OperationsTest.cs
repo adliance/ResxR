@@ -1,7 +1,6 @@
 using NUnit.Framework;
-using ResxDiffLib;
 
-namespace ResxDiffTest;
+namespace Adliance.ResxR.Core.Tests;
 
 [TestFixture]
 sealed class OperationsTest

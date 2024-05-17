@@ -1,15 +1,6 @@
 # ResxR
 
-Originally forked from https://github.com/tomwadley/resx-diff as of version published on 20 Jan 2013, then modified and upgraded tech-stack.
-
 Helps you deal with your growing number of .NET Resource files by quickly showing you the differences and similarities between them as well as performing simple operations on them.
-
-## Installing
-
-`dotnet tool install -g ResxR --no-cache --ignore-failed-sources -v q`
-
-Or build it yourself (scroll down for build instructions) and install it via the `install.cmd` file on root level of this repository.
-The install file packs the project as tool and installs ist locally as global tool.
 
 ## Usage
 
@@ -54,15 +45,3 @@ Usage: ResxR [OPTION]... [FILE]...
   files (pos. 2)
 ```
 
-## Build instructions
-
-Dependencies are installed via NuGet. Package restore has been enabled for this solution. That means that in order to build, you have to be running a recent version of NuGet and have "Allow NuGet to download missing packages during build" enabled in the settings as shown [here](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
-
-Note: if you having trouble upgrading NuGet, see [this](http://docs.nuget.org/docs/reference/known-issues#Upgrading_to_latest_NuGet_from_an_older_version_causes_a_signature_verification_error.)
-
-After the dependencies have been downloaded by NuGet, it should build. Build it using the [build.cmd](build.cmd) file.
-Run the exe in place or install as dotnet tool for convenient access.
-
----
-
-MIT licensed. Pull requests appreciated :)

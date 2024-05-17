@@ -1,8 +1,7 @@
 using System.Xml.Linq;
 using NUnit.Framework;
-using ResxDiffLib;
 
-namespace ResxDiffTest;
+namespace Adliance.ResxR.Core.Tests;
 
 [TestFixture]
 public class LoadTest

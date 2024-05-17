@@ -1,4 +1,8 @@
-# ResxDiff contributors
+# ResxR contributors
+
+* **[Adliance](https://github.com/adliance)** - [adliance.net](http://adliance.net)
+
+  * Author and maintainer
 
 * **[Tom Wadley](https://github.com/tomwadley)** - [tomwadley.net](http://tomwadley.net)
 

@@ -1,7 +1,7 @@
 using System.Xml.Linq;
-using ResxDiffLib;
+using Adliance.ResxR.Core;
 
-namespace ResxDiffConsole;
+namespace Adliance.ResxR;
 
 sealed class ResxDocumentManager
 {
