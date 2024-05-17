@@ -9,6 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResxDiffTest", "test\ResxDi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResxDiffConsole", "src\ResxDiffConsole\ResxDiffConsole.csproj", "{0BC4F749-742E-40ED-81F2-67E91BB91141}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0EB81869-74F2-4730-B2F3-AEE1B9707E87}"
+	ProjectSection(SolutionItems) = preProject
+		build.cmd = build.cmd
+		CONTRIBUTORS.md = CONTRIBUTORS.md
+		install.cmd = install.cmd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +37,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E3530A8-008D-4154-9CE8-F51BC14685D8}
 	EndGlobalSection
 EndGlobal
