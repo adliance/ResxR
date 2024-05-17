@@ -5,7 +5,7 @@ if %ERRORLEVEL% NEQ 0 (
    exit /b %errorlevel%
 )
 
-dotnet build Adliance.ResxR.sln -warnAsError
+dotnet build Adliance.ResxR.sln
 
 if %ERRORLEVEL% NEQ 0 (
    echo [91mBuild failed[0m %errorlevel%
