@@ -54,19 +54,35 @@ sealed class Options
     [Option('f', "full-data", HelpText = "Shows all fields from the data elements")]
     public bool FullData { get; set; }
 
+    // Usage
+
+    //[Usage] Can't use it, because it does not generate the tool name to the examples.
+    public static IEnumerable<Example> Usage
+    {
+        get
+        {
+            yield return new Example("ResxDiff [OPTION]... [FILE]", new Options { DuplicateKeys = true, Files = [@"C:\resx\duplicate-keys.resx"] });
+            yield return new Example("ResxDiff [OPTION]... [FILE1] [FILE2]", new Options { MissingKeys = true, Files = [@"C:\resx\Translations.resx", @"C:\resx\Translations.de.resx"] });
+            yield return new Example("ResxDiff [OPTION]... [FILE]...", new Options { Alphabetise = true, Files = [@"C:\resx\Test1.resx", @"C:\resx\Translations.resx", @"C:\resx\Translations.de.resx"] });
+        }
+    }
+
     public static HelpText GetUsageHelpText()
     {
         var help = new HelpText
         {
-            Heading = new HeadingInfo("ResxDiff", "1.0"),
-            Copyright = new CopyrightInfo("Tom Wadley, Adrian Fürschuß", 2012, 2024),
+            Heading = HeadingInfo.Default,
+            Copyright = CopyrightInfo.Default,
             AdditionalNewLineAfterOption = true,
             AddDashesToOption = true
         };
-        help.AddPreOptionsLine("Usage: ResxDiff [OPTION]... [FILE]");
-        help.AddPreOptionsLine("Usage: ResxDiff [OPTION]... [FILE1] [FILE2]");
-        help.AddPreOptionsLine("Usage: ResxDiff [OPTION]... [FILE]...");
         help.AddPreOptionsLine("Displays information about .resx files, shows differences between .resx files and performs operations on .resx files");
+        //Use the example usages from Usage property
+        foreach (var example in Usage)
+        {
+            help.AddPreOptionsLine($"Usage: {example.HelpText}");
+
+        }
         return help;
     }
 }

@@ -8,8 +8,7 @@ sealed class Program
 {
     static void Main(string[] args)
     {
-        var parser = new Parser(with => with.HelpWriter = null);
-        var parserResult = parser.ParseArguments<Options>(args);
+        var parserResult = new Parser(c => c.HelpWriter = null).ParseArguments<Options>(args);
         parserResult.WithParsed(options =>
         {
             try

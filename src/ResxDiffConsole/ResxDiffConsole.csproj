@@ -11,6 +11,9 @@
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <PackageId>ResxDiff</PackageId>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <AssemblyTitle>ResxDiff</AssemblyTitle>
+    <Company>ResxDiff</Company>
+    <Version>1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
