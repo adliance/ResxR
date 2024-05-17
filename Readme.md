@@ -16,8 +16,8 @@ The install file packs the project as tool and installs ist locally as global to
 `$ ResxR --help`
 
 ```
-ResxR 1.0
-Copyright (C) 2024 Adliance
+ResxR 1.0.0
+(c) Adliance GmbH 2024
 Displays information about .resx files, shows differences between .resx files and performs operations on .resx files
 Usage: ResxR [OPTION]... [FILE]
 Usage: ResxR [OPTION]... [FILE1] [FILE2]

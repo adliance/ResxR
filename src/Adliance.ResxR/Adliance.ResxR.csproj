@@ -5,12 +5,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <Version>0.0.0</Version>
+    <Version>1.0.0</Version>
+    <AssemblyTitle>ResxR</AssemblyTitle>
     <Authors>Adrian Fürschuß</Authors>
     <Company>Adliance GmbH</Company>
     <Product>Adliance.ResxR</Product>
     <Description>Displays information about .resx files, shows differences between .resx files and performs operations on .resx file</Description>
-    <Copyright>(c) Adliance GmbH</Copyright>
+    <Copyright>(c) Adliance GmbH 2024</Copyright>
     <RepositoryUrl>https://github.com/adliance/Adliance.ResxR</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     

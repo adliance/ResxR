@@ -61,9 +61,9 @@ sealed class Options
     {
         get
         {
-            yield return new Example("ResxDiff [OPTION]... [FILE]", new Options { DuplicateKeys = true, Files = [@"C:\resx\duplicate-keys.resx"] });
-            yield return new Example("ResxDiff [OPTION]... [FILE1] [FILE2]", new Options { MissingKeys = true, Files = [@"C:\resx\Translations.resx", @"C:\resx\Translations.de.resx"] });
-            yield return new Example("ResxDiff [OPTION]... [FILE]...", new Options { Alphabetise = true, Files = [@"C:\resx\Test1.resx", @"C:\resx\Translations.resx", @"C:\resx\Translations.de.resx"] });
+            yield return new Example("ResxR [OPTION]... [FILE]", new Options { DuplicateKeys = true, Files = [@"C:\resx\duplicate-keys.resx"] });
+            yield return new Example("ResxR [OPTION]... [FILE1] [FILE2]", new Options { MissingKeys = true, Files = [@"C:\resx\Translations.resx", @"C:\resx\Translations.de.resx"] });
+            yield return new Example("ResxR [OPTION]... [FILE]...", new Options { Alphabetise = true, Files = [@"C:\resx\Test1.resx", @"C:\resx\Translations.resx", @"C:\resx\Translations.de.resx"] });
         }
     }
 
