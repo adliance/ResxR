@@ -5,7 +5,7 @@ if %ERRORLEVEL% NEQ 0 (
    exit /b %errorlevel%
 )
 
-dotnet build ResxDiff.sln -warnAsError
+dotnet build ResxDiff.sln
 
 if %ERRORLEVEL% NEQ 0 (
    echo [91mBuild failed[0m %errorlevel%

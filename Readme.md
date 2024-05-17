@@ -6,23 +6,20 @@ Helps you deal with your growing number of .NET Resource files by quickly showin
 
 ## Installing
 
-`dotnet tool install -g ResxDiff --no-cache --ignore-failed-sources -v q`
-
-Or build it yourself (scroll down for build instructions) and install it via the `install.cmd` file on root level of this repository.
-The install file packs the project as tool and installs ist locally as global tool.
+Build it yourself (scroll down for build instructions) and install it via the `install.cmd` file on root level of this repository.
+The install file packs the project as tool and installs it locally as global tool.
 
 ## Usage
 
 `$ ResxDiff --help`
 
 ```
-ResxDiff 1.0
-Copyright (C) 2012 - 2024 Tom Wadley, Adrian Fürschuß
+ResxDiff 1.0.0
+Copyright (C) 2024 ResxDiff
+Displays information about .resx files, shows differences between .resx files and performs operations on .resx files
 Usage: ResxDiff [OPTION]... [FILE]
 Usage: ResxDiff [OPTION]... [FILE1] [FILE2]
 Usage: ResxDiff [OPTION]... [FILE]...
-Displays information about .resx files, shows differences between .resx files
-and performs operations on .resx files
 
   -m, --missing-keys                 Finds keys present in the first file which are missing in the second
 
@@ -62,7 +59,7 @@ Dependencies are installed via NuGet. Package restore has been enabled for this 
 Note: if you having trouble upgrading NuGet, see [this](http://docs.nuget.org/docs/reference/known-issues#Upgrading_to_latest_NuGet_from_an_older_version_causes_a_signature_verification_error.)
 
 After the dependencies have been downloaded by NuGet, it should build. Build it using the [build.cmd](build.cmd) file.
-Run the exe in place or put it somewhere in your path for convenient access.
+Run the exe in place or install as dotnet tool for convenient access.
 
 ---
 
