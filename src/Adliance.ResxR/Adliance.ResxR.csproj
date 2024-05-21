@@ -21,7 +21,7 @@
     <ToolCommandName>ResxR</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <PackageId>Adliance.ResxR</PackageId>
-    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageReadmeFile>package.md</PackageReadmeFile>
     <PackageProjectUrl>https://www.adliance.net</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
