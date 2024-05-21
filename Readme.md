@@ -1,5 +1,8 @@
 # ResxR
 
+[![Build Status](https://dev.azure.com/adliance/Open%20Source%20Projects/_apis/build/status%2FResxR?branchName=main)](https://dev.azure.com/adliance/Open%20Source%20Projects/_build/latest?definitionId=195&branchName=main)
+[![NuGet](https://img.shields.io/nuget/v/Adliance.ResxR.svg)](https://www.nuget.org/packages/Adliance.ResxR/)
+
 Originally forked from https://github.com/tomwadley/resx-diff as of version published on 20 Jan 2013, then modified and upgraded tech-stack.
 
 Helps you deal with your growing number of .NET Resource files by quickly showing you the differences and similarities between them as well as performing simple operations on them.
