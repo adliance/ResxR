@@ -9,7 +9,9 @@ Helps you deal with your growing number of .NET Resource files by quickly showin
 
 ## Installing
 
-`dotnet tool install -g ResxR --no-cache --ignore-failed-sources -v q`
+```
+dotnet tool install -g Adliance.ResxR --no-cache --ignore-failed-sources -v q
+```
 
 Or build it yourself (scroll down for build instructions) and install it via the `install.cmd` file on root level of this repository.
 The install file packs the project as tool and installs ist locally as global tool.
@@ -19,7 +21,7 @@ The install file packs the project as tool and installs ist locally as global to
 `$ ResxR --help`
 
 ```
-ResxR 1.0.0
+ResxR 1.0.2
 (c) Adliance GmbH 2024
 Displays information about .resx files, shows differences between .resx files and performs operations on .resx files
 Usage: ResxR [OPTION]... [FILE]

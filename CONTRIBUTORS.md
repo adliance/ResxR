@@ -8,7 +8,7 @@
 
   * Author and maintainer
 
-* * **[Adrian Fürschuß](https://github.com/afuersch)**
+* **[Adrian Fürschuß](https://github.com/afuersch)**
 
   * Upgraded to .NET 8
 
